@@ -86,12 +86,12 @@ public final class HalfBinaryExpr extends Expression {
 
     @Override
     public <R, A> R accept(GenericVisitor<R, A> v, A arg) {
-        return v.getRuleGenericVisitor().visit(this, arg);
+        throw new UnsupportedOperationException();
     }
 
     @Override
     public <A> void accept(VoidVisitor<A> v, A arg) {
-        v.getRuleVisitor().visit(this, arg);
+        v.visit(this, arg);
     }
 
     @Generated("com.github.javaparser.generator.core.node.PropertyGenerator")
